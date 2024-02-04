@@ -50,19 +50,30 @@ Use transparency to get the colour variations necessary to match the design. Hin
 - Weights: 500, 700, 800
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Hanken Grotesk";
 }
 
-.red{color:hsl(0, 100%, 67%)}
-.yellow{color: hsl(39, 100%, 56%);}
-.teal{color: hsl(166, 100%, 37%);}
-.blue{color: hsl(234, 85%, 45%);}
+.red {
+    color: hsl(0, 100%, 67%)
+}
 
-.container{
+.yellow {
+    color: hsl(39, 100%, 56%);
+}
+
+.teal {
+    color: hsl(166, 100%, 37%);
+}
+
+.blue {
+    color: hsl(234, 85%, 45%);
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,7 +83,7 @@ Use transparency to get the colour variations necessary to match the design. Hin
     right: 0;
 }
 
-.resultado-geral{
+.resultado-geral {
     width: 375px;
     height: 500px;
     background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -81,12 +92,12 @@ Use transparency to get the colour variations necessary to match the design. Hin
     text-align: center;
 }
 
-.resultado-geral h3{
+.resultado-geral h3 {
     color: hsla(241, 100%, 89%, 0.808);
     font-size: 19px;
 }
 
-.resultado-geral .resultado-numero{
+.resultado-geral .resultado-numero {
     width: 130px;
     height: 130px;
     margin: 20px auto;
@@ -98,74 +109,74 @@ Use transparency to get the colour variations necessary to match the design. Hin
     align-items: center;
 }
 
-.resultado-numero h1{
+.resultado-numero h1 {
     color: hsl(221, 100%, 96%);
     font-size: 52px;
 }
 
-.resultado-numero p{
+.resultado-numero p {
     color: #c8c7ff52;
     font-size: 16px;
     font-weight: 700;
 }
 
-.resultado-geral h2{
+.resultado-geral h2 {
     color: hsl(241, 100%, 89%);
     margin: 15px 0;
 }
 
-.resultado-geral p.descricao{
+.resultado-geral p.descricao {
     font-size: 18px;
     color: hsla(241, 100%, 89%, 0.562);
 }
 
-section.detalhes{
+section.detalhes {
     width: 375px;
     padding: 0 15px;
 }
 
-.detalhes h3{
+.detalhes h3 {
     color: hsl(224, 30%, 27%);
     margin: 20px 0;
 }
 
-.container-detalhes{
+.container-detalhes {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.bloco-detalhe{
+.bloco-detalhe {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding:15px;
+    padding: 15px;
     background-color: hsla(222, 100%, 96%, 0.678);
     border-radius: 10px;
 }
 
-.tipo-detalhe{
+.tipo-detalhe {
     display: flex;
     width: 90px;
 }
 
-.tipo-detalhe h4{
+.tipo-detalhe h4 {
     margin-left: 5px;
 }
 
-.nota spam{
+.nota spam {
     color: hsl(224, 30%, 27%);
     font-weight: 800;
     font-size: 17px;
 }
 
-.nota .max{
+.nota .max {
     color: hsla(224, 30%, 27%, 0.55);
     font-weight: 500;
     font-size: 15px;
 }
 
-button{
+button {
     width: 100%;
     margin: 35px 0;
     padding: 20px;
@@ -177,3 +188,35 @@ button{
     cursor: pointer;
 }
 
+@media screen and (min-width: 992px) {
+    .container {
+        flex-direction: row;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .resultado-geral {
+        width: 375px;
+        height: 450px;
+        background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+    }
+
+    section.detalhes {
+        box-shadow: 4px 4px 15px #00000017;
+        border-radius: 20px;
+        padding: 0 15px;
+        height: 450px;
+        padding-left: 50px;
+        position: relative;
+        left: -25px;
+    }
+
+    button:hover{
+        background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    }
+}
